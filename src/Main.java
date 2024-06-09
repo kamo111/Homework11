@@ -22,6 +22,7 @@ public class Main {
             System.out.println("Установите обычную версию приложения по ссылке.");
         }
     }
+
     public static void deliveringDistace(int deliveryDistance) {
         if (deliveryDistance > 0 && deliveryDistance < 20) {
             System.out.println("Потребуется день доставки.");
