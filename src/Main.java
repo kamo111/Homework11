@@ -23,18 +23,14 @@ public class Main {
         }
     }
     public static int deliveringDistance(int deliveryDistance) {
-        int dayToDelivery = 0;
         if (deliveryDistance > 0 && deliveryDistance < 20) {
-            dayToDelivery = 1;
-            return dayToDelivery;
+            return 1;
         } else if (deliveryDistance > 20 && deliveryDistance < 60) {
-            dayToDelivery = 2;
-            return dayToDelivery;
+            return 2;
         } else if (deliveryDistance > 60 && deliveryDistance < 100) {
-            dayToDelivery = 3;
-            return dayToDelivery;
+            return 3;
         } else
-            return dayToDelivery;
+        return  0;
     }
     public static void main(String[] args) {
 
@@ -45,11 +41,17 @@ public class Main {
         System.out.println("Задание 2.");
         int currentYear = LocalDate.now().getYear();
         int currentOS = 1;
-        suggestAppVersion(currentOS,currentYear);
+        suggestAppVersion(currentOS, currentYear);
 
         System.out.println("Задание 3.");
-        int deliveryDistance = 4;
-        System.out.println("Потребуется дней  = " + deliveringDistance(deliveryDistance));
+        int deliveryDistance = 20;
+        int days = deliveringDistance(deliveryDistance);
+        if (days > 0) {
+            System.out.println("Потребуется дней  = " + days);
+        } else {
+            System.out.println("Доставки нет.");
+        }
+    }
+    }
 
-    }
-    }
+
